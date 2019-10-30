@@ -33,7 +33,7 @@ class TaTeTiTest(unittest.TestCase):
         tateti = TaTeTi(board)
         self.assertFalse(tateti.full())
 
-    """@parameterized.expand([
+    @parameterized.expand([
         ([['x', 'x', 'x', ' ', ' ', ' ', ' ', ' ', ' ']]),
         ([['o', 'o', 'o', ' ', ' ', ' ', ' ', ' ', ' ']]),
         ([[' ', ' ', ' ', 'x', 'x', 'x', ' ', ' ', ' ']]),
@@ -75,7 +75,7 @@ class TaTeTiTest(unittest.TestCase):
     ])
     def test_not_win(self, board):
         tateti = TaTeTi(board)
-        self.assertFalse(tateti.win())"""
+        self.assertFalse(tateti.win())
 
     @parameterized.expand([
         (['x', 'o', 'x', 'o', ' ', 'o', 'x', 'o', 'x'], 4),
@@ -125,7 +125,7 @@ class TaTeTiTest(unittest.TestCase):
         tateti.assign(position, piece)
         self.assertEqual(tateti.board, board_new)
 
-    """@parameterized.expand([
+    @parameterized.expand([
         (['x', 'o', 'x', 'o', ' ', 'o', 'x', 'o', 'x'],
          '\n x | o | x \n---+---+---\n o | 5 | o \n---+---+---\n x | o | x \n'),
         ([' ', ' ', 'x', ' ', 'o', 'x', ' ', 'o', ' '],
@@ -135,7 +135,7 @@ class TaTeTiTest(unittest.TestCase):
     ])
     def test_draw_board(self, board, display):
         tateti = TaTeTi(board)
-        self.assertEqual(tateti.draw_board(), display)"""
+        self.assertEqual(tateti.draw_board(), display)
 
 
 if __name__ == '__main__':
